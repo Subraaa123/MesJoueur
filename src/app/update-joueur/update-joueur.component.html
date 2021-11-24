@@ -1,0 +1,41 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Joueur :</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Joueur</label>
+    <input readonly type="text" [(ngModel)]="currentJoueur.idJoueur"
+    name="idJoueur" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Joueur</label>
+    <input type="text"[(ngModel)]= "currentJoueur.nomJoueur"
+    name="nomJoueur" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Numero</label>
+    <input type="number" [(ngModel)]= "currentJoueur.numJoueur"
+    name="numJoueur" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Equipe</label>
+        <input type="text"[(ngModel)]= "currentJoueur.equipeJoueur"
+        name="equipeJoueur" class="form-control">
+        </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date signiature</label>
+    <input type="date" [ngModel]="currentJoueur.dateSingiature | date: 'yyyy-MM-dd'"
+    (ngModelChange)=" currentJoueur.dateSingiature= $event" na
+
+    me="dateSingiature" class="form-control">
+    
+    </div>
+    <div class="mt-2">
+    
+    <button type="submit" (click)="updateJoueur()" class="btn btn-success">Modifer</button>
+    
+    </div>
+    </form>
+    
+    </div>

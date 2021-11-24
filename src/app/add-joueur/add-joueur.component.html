@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Joueur :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Joueur</label>
+        <input type="text" [(ngModel)]="newJoueur.idJoueur"
+        name="idJoueur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Joueur</label>
+        <input type="text"[(ngModel)]= "newJoueur.nomJoueur"
+        name="nomJoueur" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Numero</label>
+        <input type="number" [(ngModel)]= "newJoueur.numJoueur"
+        name="numJoueur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Nom Equipe</label>
+            <input type="text"[(ngModel)]= "newJoueur.equipeJoueur"
+            name="equipeJoueur" class="form-control">
+            </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date Singiature</label>
+        <input type="date" [(ngModel)]= "newJoueur.dateSingiature"
+        name="dateSingiature" class="form-control">
+        </div>
+        <div class="mt-2">
+        
+        <button type="submit" (click)="addJoueur()" class="btn btn-success">Ajouter</button>
+        
+        </div>
+        </form>
+        
+        </div>
